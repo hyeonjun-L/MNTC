@@ -60,7 +60,7 @@ const HeaderNav = () => {
       {navView && (
         <nav
           ref={navRef}
-          className="fixed right-0 top-0 flex h-lvh w-2/3 flex-col items-center justify-evenly bg-[#e0e0e0] sm:hidden"
+          className="fixed right-0 top-0 flex h-dvh w-2/3 flex-col items-center justify-evenly bg-[#e0e0e0] sm:hidden"
         >
           <Link
             href="/scroll"
@@ -83,7 +83,7 @@ const HeaderNav = () => {
           >
             Solution
           </Link>
-          <button className="absolute bottom-4 left-4 " onClick={closeNavView}>
+          <button className="absolute bottom-4 left-4" onClick={closeNavView}>
             <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
