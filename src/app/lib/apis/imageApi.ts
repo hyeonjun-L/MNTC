@@ -6,7 +6,13 @@ interface FetchError extends Error {
 
 const CLIENT_ID = process.env.NEXT_PUBLIC_IMAGE_CLIENT_ID;
 
-export const getImages = async ({ page }: { page: number }): Promise<Photo> => {
+export const getImages = async ({
+  pageParam,
+}: {
+  pageParam: { page: number };
+}): Promise<Photo[]> => {
+  const { page } = pageParam;
+
   try {
     const response = await fetch(
       typeof window !== 'undefined'

@@ -5,8 +5,6 @@ import { usePathname } from 'next/navigation';
 const HeaderNav = () => {
   const pathName = usePathname();
 
-  console.log(pathName);
-
   return pathName !== '/' ? (
     <nav className="flex gap-4 text-lg">
       <Link

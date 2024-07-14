@@ -12,7 +12,7 @@ export const GET = async (request: NextRequest) => {
 
   const page = request.nextUrl.searchParams.get('page');
 
-  if (page) {
+  if (!page) {
     return NextResponse.json(
       {
         status: 400,

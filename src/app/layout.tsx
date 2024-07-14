@@ -1,4 +1,5 @@
 import { Noto_Sans_KR } from 'next/font/google';
+import QueryProvider from './lib/provider/QueryProvider';
 import Header from './_components/Header';
 import type { Metadata } from 'next';
 import './globals.css';
@@ -21,7 +22,7 @@ export default function RootLayout({
     <html lang="kr">
       <body className={`${noto.className} flex h-lvh flex-col text-base`}>
         <Header />
-        {children}
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );
