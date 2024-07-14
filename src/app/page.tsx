@@ -6,7 +6,7 @@ export default function Home() {
       <nav className="flex flex-col gap-4 text-2xl">
         <Link href="/scroll">Infinite Scroll</Link>
         <Link href="/pagination">Pagination</Link>
-        <Link href={'/'}>Solution</Link>
+        <Link href="/solution">Solution</Link>
       </nav>
     </main>
   );

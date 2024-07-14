@@ -1,5 +1,5 @@
-import { getImages } from '../lib/apis/imageApi';
 import Pagination from './_components/Pagination';
+import { getImages } from '../lib/apis/imageApi';
 
 const page = async ({
   searchParams,

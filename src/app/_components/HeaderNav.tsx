@@ -19,7 +19,7 @@ const HeaderNav = () => {
       >
         Pagination
       </Link>
-      <Link href={'/'}>Solution</Link>
+      <Link href="/solution">Solution</Link>
     </nav>
   ) : null;
 };

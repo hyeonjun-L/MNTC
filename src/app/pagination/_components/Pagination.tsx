@@ -8,6 +8,8 @@ interface PaginationProps {
 }
 
 const Pagination = ({ images, currentPage }: PaginationProps) => {
+  images = currentPage !== 6 ? images : images.slice(0, 6);
+
   return (
     <main className="mt-14">
       <ul className="grid gap-4 px-10 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
