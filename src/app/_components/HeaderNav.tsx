@@ -6,7 +6,7 @@ const HeaderNav = () => {
   const pathName = usePathname();
 
   return pathName !== '/' ? (
-    <nav className="flex gap-4 text-lg">
+    <nav className="hidden gap-4 text-lg sm:flex">
       <Link
         href="/scroll"
         className={`${pathName === '/scroll' ? 'underline underline-offset-8' : ''}`}

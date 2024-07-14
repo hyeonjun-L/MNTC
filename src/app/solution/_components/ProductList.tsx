@@ -1,6 +1,7 @@
 import PRODUCTLIST from '@/constants/constants';
+import { productType } from '@/types/product';
 
-const ProductList = () => {
+const ProductList = ({ products }: { products: productType[] }) => {
   return (
     <div>
       <table className="min-w-full border border-gray-300 bg-white">
@@ -45,7 +46,7 @@ const ProductList = () => {
           </tr>
         </thead>
         <tbody>
-          {PRODUCTLIST.map((product) => (
+          {products.map((product) => (
             <tr key={product.productCode}>
               <td className="border border-gray-300 px-4 py-2">
                 {product.productCode}
