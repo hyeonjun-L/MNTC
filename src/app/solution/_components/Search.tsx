@@ -1,4 +1,5 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import { useRef, useState } from 'react';
 
 type Option =
@@ -87,6 +88,7 @@ const Search = ({
 }: {
   searchParams: { [key: string]: string };
 }) => {
+  const router = useRouter();
   const [formValues, setFormValues] = useState<{ [key: string]: string }>({
     ...searchParams,
   });
@@ -164,6 +166,13 @@ const Search = ({
     }
   };
 
+  const hasValues = Object.values(formValues).some((value) => value !== '');
+
+  const resetFormValuesHandler = () => {
+    setFormValues({});
+    router.push('/solution');
+  };
+
   return (
     <form className="sticky left-0 right-0 w-full" onSubmit={handleSubmit}>
       <fieldset className="bg-blue-50 px-10 py-4">
@@ -220,7 +229,16 @@ const Search = ({
             ),
           )}
         </div>
-        <div className="mt-4 flex justify-end">
+        <div className="mt-4 flex items-center justify-end gap-4">
+          {hasValues && (
+            <button
+              type="reset"
+              onClick={resetFormValuesHandler}
+              className="flex font-semibold text-gray-500"
+            >
+              초기화
+            </button>
+          )}
           <button className="rounded-lg bg-blue-700 px-4 py-2 text-lg font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             검색
           </button>

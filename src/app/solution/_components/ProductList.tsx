@@ -1,4 +1,3 @@
-import PRODUCTLIST from '@/constants/constants';
 import { productType } from '@/types/product';
 
 const ProductList = ({ products }: { products: productType[] }) => {
@@ -81,7 +80,7 @@ const ProductList = ({ products }: { products: productType[] }) => {
               <td className="border border-gray-300 px-4 py-2">
                 {product.origin}
               </td>
-              <td className="border border-gray-300 px-4 py-2">
+              <td className="cursor-pointer border border-gray-300 px-4 py-2 text-blue-600 hover:underline">
                 {product.actions}
               </td>
             </tr>

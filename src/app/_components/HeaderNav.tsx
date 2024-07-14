@@ -19,7 +19,12 @@ const HeaderNav = () => {
       >
         Pagination
       </Link>
-      <Link href="/solution">Solution</Link>
+      <Link
+        href="/solution"
+        className={`${pathName === '/solution' ? 'underline underline-offset-8' : ''}`}
+      >
+        Solution
+      </Link>
     </nav>
   ) : null;
 };
