@@ -1,4 +1,4 @@
-const productList = [
+const PRODUCTLIST = [
   {
     productCode: 1,
     productName: 'product1',
@@ -561,4 +561,4 @@ const productList = [
   },
 ];
 
-export default productList;
+export default PRODUCTLIST;

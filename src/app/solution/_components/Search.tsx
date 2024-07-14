@@ -89,9 +89,9 @@ const Search = () => {
   };
 
   return (
-    <form>
+    <form className="sticky left-0 right-0 w-full">
       <fieldset className="bg-blue-50 px-10 py-4">
-        <div className="grid  gap-x-6 gap-y-3 md:grid-cols-2">
+        <div className="grid gap-x-6 gap-y-3 md:grid-cols-2">
           {OPTION.map((option) =>
             isRangeOption(option) ? (
               <div key={option.id} className="flex items-center">
