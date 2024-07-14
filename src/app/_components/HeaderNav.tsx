@@ -6,22 +6,22 @@ const HeaderNav = () => {
   const pathName = usePathname();
 
   return pathName !== '/' ? (
-    <nav className="hidden gap-4 text-lg sm:flex">
+    <nav className="hidden text-lg sm:flex">
       <Link
         href="/scroll"
-        className={`${pathName === '/scroll' ? 'underline underline-offset-8' : ''}`}
+        className={`peer ${pathName === '/scroll' ? 'underline underline-offset-8' : ''} px-2 hover:underline hover:underline-offset-8 peer-hover:no-underline`}
       >
         Infinite Scroll
       </Link>
       <Link
         href="/pagination"
-        className={`${pathName === '/pagination' ? 'underline underline-offset-8' : ''}`}
+        className={`peer ${pathName === '/pagination' ? 'underline underline-offset-8' : ''} px-2 hover:underline hover:underline-offset-8 peer-hover:no-underline`}
       >
         Pagination
       </Link>
       <Link
         href="/solution"
-        className={`${pathName === '/solution' ? 'underline underline-offset-8' : ''}`}
+        className={`peer ${pathName === '/solution' ? 'underline underline-offset-8' : ''} px-2 hover:underline hover:underline-offset-8 peer-hover:no-underline`}
       >
         Solution
       </Link>
