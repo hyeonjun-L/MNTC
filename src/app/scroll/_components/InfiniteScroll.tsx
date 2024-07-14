@@ -58,9 +58,14 @@ const InfiniteScroll = ({ images: initialImages }: { images: Photo[] }) => {
           <li
             ref={index === images.length - 1 && hasNextPage ? ref : undefined}
             key={id + index}
-            className={`relative aspect-square ${index >= previousImagesCount ? 'animate-fadeInUp' : ''}`}
+            className={`relative aspect-square p-4 ${index >= previousImagesCount ? 'animate-fadeInUp' : ''} shadow-[8px_8px_16px_#5a5a5a,-8px_-8px_16px_#ffffff]`}
           >
-            <Link href={`/photos?image=${urls.regular}`} scroll={false}>
+            <Link
+              href={`/photos?image=${urls.regular}`}
+              scroll={false}
+              className="group"
+            >
+              <div className="absolute left-0 top-0 z-10 hidden size-full backdrop-brightness-75 group-hover:block" />
               <Image
                 src={urls.small_s3}
                 alt={alternative_slugs.ko}
