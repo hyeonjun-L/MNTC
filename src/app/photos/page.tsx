@@ -19,7 +19,7 @@ const page = async ({
         height={base64.height}
         sizes="70vw"
         placeholder="blur"
-        blurDataURL={base64.src}
+        blurDataURL={base64.placeholder}
         className="aspect-square w-[40rem]"
       />
     </div>

@@ -19,7 +19,7 @@ const page = async ({
         fill
         sizes="70vw"
         placeholder="blur"
-        blurDataURL={base64.src}
+        blurDataURL={base64.placeholder}
       />
     </Modal>
   );

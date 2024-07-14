@@ -12,7 +12,7 @@ const Pagination = ({ images, currentPage }: PaginationProps) => {
   images = currentPage !== 6 ? images : images.slice(0, 6);
 
   return (
-    <main className="mt-14">
+    <main className="mx-auto mt-14 w-full max-w-[103.25rem]">
       <ul className="grid gap-4 px-10 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 ">
         {images.map(({ id, urls, alternative_slugs }, index) => (
           <li

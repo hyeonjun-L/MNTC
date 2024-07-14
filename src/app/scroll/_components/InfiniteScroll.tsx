@@ -52,7 +52,7 @@ const InfiniteScroll = ({ images: initialImages }: { images: Photo[] }) => {
     images.length - (imagesData?.pages.slice(-1)[0]?.length || 0);
 
   return (
-    <main className="mt-14 h-full">
+    <main className="mx-auto mt-14 size-full max-w-[103.25rem]">
       <ul className="grid gap-4 p-10 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
         {images.map(({ id, urls, alternative_slugs }, index) => (
           <li

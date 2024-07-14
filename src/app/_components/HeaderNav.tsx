@@ -47,7 +47,7 @@ const HeaderNav = () => {
           Solution
         </Link>
       </nav>
-      <button onClick={() => setNavView(true)}>
+      <button className="sm:hidden" onClick={() => setNavView(true)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 50 50"
@@ -83,7 +83,7 @@ const HeaderNav = () => {
           >
             Solution
           </Link>
-          <button className="absolute bottom-4 left-4" onClick={closeNavView}>
+          <button className="absolute bottom-4 left-4 " onClick={closeNavView}>
             <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
