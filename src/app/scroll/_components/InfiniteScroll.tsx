@@ -2,6 +2,7 @@
 
 import { useInfiniteQuery } from '@tanstack/react-query';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useMemo } from 'react';
 import { getImages } from '@/app/lib/apis/imageApi';
 import useIntersect from '@/hooks/useIntersect';
@@ -59,12 +60,16 @@ const InfiniteScroll = ({ images: initialImages }: { images: Photo[] }) => {
             key={id + index}
             className={`relative aspect-square ${index >= previousImagesCount ? 'animate-fadeInUp' : ''}`}
           >
-            <Image
-              src={urls.small_s3}
-              alt={alternative_slugs.ko}
-              fill
-              sizes="(max-width: 640px) 90vw, (max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
-            />
+            <Link href={`/photos?image=${urls.regular}`} scroll={false}>
+              <Image
+                src={urls.small_s3}
+                alt={alternative_slugs.ko}
+                fill
+                sizes="(max-width: 640px) 90vw, (max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOsa2yqBwAFCAICLICSyQAAAABJRU5ErkJggg=="
+              />
+            </Link>
           </li>
         ))}
         {isFetchingNextPage &&

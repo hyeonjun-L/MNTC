@@ -15,14 +15,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  imagesModal,
 }: Readonly<{
   children: React.ReactNode;
+  imagesModal: React.ReactNode;
 }>) {
   return (
     <html lang="kr">
       <body className={`${noto.className} flex h-lvh flex-col text-base`}>
         <Header />
-        <QueryProvider>{children}</QueryProvider>
+        <QueryProvider>
+          {children}
+          {imagesModal}
+        </QueryProvider>
       </body>
     </html>
   );
