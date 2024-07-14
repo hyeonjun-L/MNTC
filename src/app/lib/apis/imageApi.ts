@@ -8,8 +8,10 @@ const CLIENT_ID = process.env.NEXT_PUBLIC_IMAGE_CLIENT_ID;
 
 export const getImages = async ({
   pageParam,
+  size = 10,
 }: {
   pageParam: { page: number };
+  size?: number;
 }): Promise<Photo[]> => {
   const { page } = pageParam;
 
@@ -17,7 +19,7 @@ export const getImages = async ({
     const response = await fetch(
       typeof window !== 'undefined'
         ? `/api/get-image?page=${page}`
-        : `https://api.unsplash.com/photos?client_id=${CLIENT_ID}&per_page=10&page=${page}`,
+        : `https://api.unsplash.com/photos?client_id=${CLIENT_ID}&per_page=${size}&page=${page}`,
       {
         method: 'GET',
         credentials: 'include',

@@ -9,11 +9,16 @@ const HeaderNav = () => {
     <nav className="flex gap-4 text-lg">
       <Link
         href="/scroll"
-        className={`${pathName === '/scroll' ? 'underline underline-offset-4' : ''}`}
+        className={`${pathName === '/scroll' ? 'underline underline-offset-8' : ''}`}
       >
         Infinite Scroll
       </Link>
-      <Link href={'/'}>Pagination</Link>
+      <Link
+        href="/pagination"
+        className={`${pathName === '/pagination' ? 'underline underline-offset-8' : ''}`}
+      >
+        Pagination
+      </Link>
       <Link href={'/'}>Solution</Link>
     </nav>
   ) : null;

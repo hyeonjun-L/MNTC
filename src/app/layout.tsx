@@ -1,6 +1,6 @@
 import { Noto_Sans_KR } from 'next/font/google';
-import QueryProvider from './lib/provider/QueryProvider';
 import Header from './_components/Header';
+import QueryProvider from './lib/provider/QueryProvider';
 import type { Metadata } from 'next';
 import './globals.css';
 

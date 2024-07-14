@@ -5,7 +5,7 @@ export default function Home() {
     <main className="flex h-full items-center justify-center">
       <nav className="flex flex-col gap-4 text-2xl">
         <Link href="/scroll">Infinite Scroll</Link>
-        <Link href={'/'}>Pagination</Link>
+        <Link href="/pagination">Pagination</Link>
         <Link href={'/'}>Solution</Link>
       </nav>
     </main>
